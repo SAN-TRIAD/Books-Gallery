@@ -1,3 +1,0 @@
-//khedma
-//testetest
-//sabrine-test
