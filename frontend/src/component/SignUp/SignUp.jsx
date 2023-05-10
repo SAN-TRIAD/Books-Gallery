@@ -93,7 +93,6 @@ const Signup = () => {
             <span>Use your account</span>
             <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
             <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            {/* <button  onClick={handleLogIn}>Sign In</button> */}
             <button onClick={()=>{handleLogIn();navigate('/home')}}>Sign In</button>
           </form>
         </div>
@@ -107,7 +106,7 @@ const Signup = () => {
             <div className="overlay-panel overlay-right">
               <h1>Hello, Friend</h1>
               <p>Enter your personal details and start the journey with us</p>
-              <button className="ghost"  id="signUp">Sign Up</button>
+              <button className="ghost" id="signUp">Sign Up</button>
             </div>
           </div>
         </div>
