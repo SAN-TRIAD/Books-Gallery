@@ -22,9 +22,9 @@ USE `book_gallery` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `book_gallery`.`admin` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -36,9 +36,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `book_gallery`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `password` VARCHAR(45) NOT NULL,
+  `name` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(225) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -50,15 +50,15 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `book_gallery`.`books` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `title` VARCHAR(45) NOT NULL,
-  `author` VARCHAR(45) NOT NULL,
-  `genre` VARCHAR(45) NOT NULL,
+  `title` VARCHAR(255) NOT NULL,
+  `author` VARCHAR(255) NOT NULL,
+  `genre` VARCHAR(255) NOT NULL,
   `description` TEXT NOT NULL,
   `publication_date` DATE NULL DEFAULT NULL,
-  `language` VARCHAR(45) NULL DEFAULT NULL,
+  `language` VARCHAR(255) NULL DEFAULT NULL,
   `number_pages` INT NOT NULL,
-  `price` VARCHAR(45) NULL DEFAULT NULL,
-  `cover_image` VARCHAR(45) NULL DEFAULT NULL,
+  `price` VARCHAR(255) NULL DEFAULT NULL,
+  `cover_image` VARCHAR(255) NULL DEFAULT NULL,
   `users_id` INT NOT NULL,
   `admin_id` INT NOT NULL,
   PRIMARY KEY (`id`, `users_id`, `admin_id`),
