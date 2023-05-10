@@ -96,6 +96,12 @@ books.add(newBook,(err,rslt)=>{
 })
 }
 
+const getAllBooks = (req, res) => {
+    books.getBooks((err, results) => {
+      if (err) res.status(500).send(err);
+      else res.json(results);
+    });
+  };
 
 const getBook=(req,res)=>{
   const searchName=req.params.bookName
@@ -106,4 +112,5 @@ const getBook=(req,res)=>{
 }
 
 
-module.exports = { getAllBooks, updateBook, deleteBook,addNewBook,getBook };
+
+module.exports={}

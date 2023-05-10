@@ -1,53 +1,32 @@
+import React, { useState } from "react";
+import axios from "axios"
+import { Link, useNavigate } from 'react-router-dom'
 
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import '../SignUp/Signup.css';
-import { useNavigate } from "react-router-dom"
+const Signup=()=>{
+    const [name,setName]=useState('')
+    const [email,setEmail]=useState('')
+    const [password,setPassword]=useState('')
+    const [passwordValidator,setPasswordValidator]=useState('')
 
+    // const navigate = useNavigate();
 
-const Signup = () => {
-  const navigate = useNavigate()
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogIn = (event) => {
-    event.preventDefault();
-    const body = { email, password };
-    axios.post('http://localhost:3001/Books-Gallery/user/login', body)
-      .then(resp => {
-        if (resp.status === 200) {
-          navigate('/home')
-          alert("Welcome to our Gallery")
-        }
-      })
-      .catch((err) => {
-        console.log(err)
-        alert("email or password incorrect!")
-      })
-  };
-
-
-  const handlesignup = () => {
-    if (name === "" || email === "" || password === "") {
-      alert("Please fill all the fields!");
-    } else {
-      const body = { name, email, password };
-      axios.post('http://localhost:3001/Books-Gallery/user/signup', body, {
-        headers: { "Content-Type": "application/json" },
-      })
-        .then(rslt => {
-          console.log(rslt);
+    const handlesignup=()=>{
+        if (password !== passwordValidator) {
+            return alert("passwords don't match");
+          }
+        const body = {name, email, password,passwordValidator };
+        axios.post('http://localhost:3001/user/signup', body, {
+            headers: { "Content-Type": "application/json" },
+          })
+        .then(rslt=>{console.log(rslt);
+            alert("Welcome to our Gallery");
+            // navigate('/login');
         })
-        .catch((err) => console.log(err));
+        
     }
-
-  };
-
-  const handleNameChange = (event) => {
-    setName(event.target.value);
-  };
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+    }
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -71,40 +50,31 @@ const Signup = () => {
     });
   }, []);
 
-  return (
-    <div className="body">
-      <div className="container" id="container">
-        <div className="form-container sign-up-container">
-          <form>
-            <h1>Create Account</h1>
-            <input type="text" placeholder="Name" value={name} onChange={handleNameChange} />
-            <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
-            <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            <button onClick={handlesignup}>Sign Up</button>
-          </form>
-        </div>
-        <div className="form-container sign-in-container">
-          <form>
-            <h1>Sign In</h1>
-            <span>Use your account</span>
-            <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
-            <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            <button onClick={(event) => handleLogIn(event)}>Sign In</button>
-          </form>
-        </div>
-        <div className="overlay-container">
-          <div className="overlay">
-            <div className="overlay-panel overlay-left">
-              <h1>Welcome Back</h1>
-              <p>To keep connected with us please login with your personal info</p>
-              <button className="ghost" id="signIn">Sign In</button>
+    return(
+        <div>
+            <div class="container">
+                <form>
+                    <p>Welcome</p>
+                    <input type="text" placeholder="Name" value={name} onChange={handleNameChange} /><br />
+                    <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} /><br />
+                    <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} /><br />
+                    <label>Confirm Password </label>
+                    <input type="password" placeholder="PasswordValidator" value={passwordValidator} onChange={handlePasswordValChange} /><br />
+                    <input type="button" value="Sign up" onClick={handlesignup} /><br />
+                    <a href="#">Forgot Password?</a>
+                    <div>
+                       <Link to={`/login`}> signin</Link>
+                    </div>
+                </form>
+
+                <div class="drops">
+                    <div class="drop drop-1"></div>
+                    <div class="drop drop-2"></div>
+                    <div class="drop drop-3"></div>
+                    <div class="drop drop-4"></div>
+                    <div class="drop drop-5"></div>
+                </div>
             </div>
-            <div className="overlay-panel overlay-right">
-              <h1>Hello, Friend</h1>
-              <p>Enter your personal details and start the journey with us</p>
-              <button className="ghost" id="signUp">Sign Up</button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -112,4 +82,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
