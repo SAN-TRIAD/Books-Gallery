@@ -1,4 +1,4 @@
-const books = require ('../dataBase/bookModel')
+const books = require ('../model/bookModel')
 
 
 
