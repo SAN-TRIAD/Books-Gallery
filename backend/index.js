@@ -13,5 +13,5 @@ app.use(express.urlencoded({extended:true}))
 app.use("/Books-Gallery", userRoute);
 app.use("/Books-Gallery", router)
 
-app.listen(port,()=> { console.log(`listening at http://localhost:${port}`)})
+app.listen(port,()=> { console.log(`listening at http://127.0.0.1:${port}`)})
 
