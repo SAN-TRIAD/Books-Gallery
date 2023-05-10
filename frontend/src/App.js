@@ -4,7 +4,7 @@ import Signup from "./component/SignUp/SignUp.jsx"
 
 function App() {
   return (
-    <div className="App">
+    <div className="root">
      <BrowserRouter>
         <Routes>
   
