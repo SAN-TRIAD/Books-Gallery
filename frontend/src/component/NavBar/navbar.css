@@ -21,7 +21,6 @@
   position: relative;
   font-size: 25px;
   margin-top: 10px;
-  
   left: 35%;
   cursor: pointer;
 }
@@ -416,3 +415,33 @@ button.ghost {
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 } */
+
+/* search */
+.search-div {
+  margin-left: 67%;
+  margin-top: 14px;
+}
+
+.search-input {
+  border-radius: 30px;
+  width: 220px;
+  height: 50px;
+  border: none;
+  box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
+  padding-left: 15px;
+  background-color: rgb(232, 237, 241);
+}
+
+.search-button {
+  position: absolute;
+  left: 15px;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin-left: 94%;
+  margin-top: 7px;
+  border: none;
+  background: none;
+  outline: none !important;
+  cursor: pointer;
+}
