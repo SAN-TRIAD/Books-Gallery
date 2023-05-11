@@ -11,27 +11,25 @@ const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  // const handleLogIn = () => {
-  //   const body = { email, password };
-  //   axios.post('http://localhost:3001/Books-Gallery/user/login', body)
-  //     .then(rslt => console.log(rslt));
-  // };
-  const handleLogIn = () => {
+  const[error,setError]=useState("")
+ 
+  const handleLogIn = (event) => {
+    event.preventDefault(); 
     const body = { email, password };
     axios.post('http://localhost:3001/Books-Gallery/user/login', body)
       .then(resp => {
         if (resp.status === 200) {
-
-        navigate ('/home'); 
-      } 
-      else {
-
-        console.log(resp);
-      }
-    });
+          navigate('/home')
+          alert("Welcome to our Gallery") 
+        } 
+      })
+      .catch((err)=>{
+        console.log(err)
+        alert("email or password incorrect!")
+      })
   };
- 
+
+  
   
   const handlesignup = () => { 
     if (name === "" || email === "" || password === "") {
@@ -93,7 +91,7 @@ const Signup = () => {
             <span>Use your account</span>
             <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
             <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            <button onClick={()=>{handleLogIn();navigate('/home')}}>Sign In</button>
+            <button onClick={(event) => handleLogIn(event)}>Sign In</button>
           </form>
         </div>
         <div className="overlay-container">

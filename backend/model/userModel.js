@@ -16,18 +16,18 @@ module.exports={
             callback(err,result)
         })
     },
-    getOne:function(email){
-        const sql=`SELECT * FROM users WHERE email='${email}'`
-        return new Promise((resolve,reject)=>{connection.query(sql,(err,result)=>{
-            if(err){
-                reject(err)
+    getOneByEmail: (email) => {
+        return new Promise((resolve, reject) => {
+          const sql = `SELECT * FROM users WHERE email = ?`;
+          connection.query(sql, [email], (error, results) => {
+            if (error) {
+              reject(error);
+            } else {
+              resolve(results);
             }
-            else{ 
-                resolve(result)
-            }})
-        
-        })
-    },
+          });
+        });
+      },
     deleteUser:function(id,callback){
         const sql=`DELETE FROM users WHERE id=${id}`
         connection.query(sql,function(err,result){
@@ -44,6 +44,22 @@ module.exports={
             else callback(null,rslt[0])
         })
 
-}
+},
+// updateUser: (name, user) => {
+//     const sql = `update users set ? where name="${name}"`
+//       connection.query(sql, user, (err, result) => {
+//         if (err) {
+//           reject(err)
+//         } else {
+//           resolve(result)
+//         }
+//       })
+//     }
+updateUser: (name, user,cb) => {
+    const sql = `update users set ? where name="${name}"`
+      connection.query(sql, user, (err, result) => {
+        cb(err,result)
+      })
+  },
 
 };
