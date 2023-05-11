@@ -39,7 +39,7 @@ function NavBar() {
         </div>
         <div className="nav-item" active-color="red">
           <input type="text"  />
-          <button>search</button>
+          <button className="search-btn">search</button>
         </div>
         <span className="nav-indicator"></span>
       </nav>

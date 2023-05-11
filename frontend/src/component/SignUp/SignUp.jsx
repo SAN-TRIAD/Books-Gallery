@@ -6,43 +6,43 @@ import { useNavigate } from "react-router-dom"
 
 
 const Signup = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogIn = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     const body = { email, password };
     axios.post('http://localhost:3001/Books-Gallery/user/login', body)
       .then(resp => {
         if (resp.status === 200) {
           navigate('/home')
-          alert("Welcome to our Gallery") 
-        } 
+          alert("Welcome to our Gallery")
+        }
       })
-      .catch((err)=>{
+      .catch((err) => {
         console.log(err)
         alert("email or password incorrect!")
       })
   };
- 
-  
-  const handlesignup = () => { 
+
+
+  const handlesignup = () => {
     if (name === "" || email === "" || password === "") {
-    alert("Please fill all the fields!");
-  } else {
-    const body = { name, email, password };
-    axios.post('http://localhost:3001/Books-Gallery/user/signup', body, {
-      headers: { "Content-Type": "application/json" },
-    })
-      .then(rslt => {
-        console.log(rslt);
+      alert("Please fill all the fields!");
+    } else {
+      const body = { name, email, password };
+      axios.post('http://localhost:3001/Books-Gallery/user/signup', body, {
+        headers: { "Content-Type": "application/json" },
       })
-      .catch((err) => console.log(err));
-   }
-    
+        .then(rslt => {
+          console.log(rslt);
+        })
+        .catch((err) => console.log(err));
+    }
+
   };
 
   const handleNameChange = (event) => {
@@ -89,8 +89,8 @@ const Signup = () => {
             <span>Use your account</span>
             <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
             <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            <button onClick={(event) => handleLogIn(event)}>Sign In</button>    
-            </form>
+            <button onClick={(event) => handleLogIn(event)}>Sign In</button>
+          </form>
         </div>
         <div className="overlay-container">
           <div className="overlay">
