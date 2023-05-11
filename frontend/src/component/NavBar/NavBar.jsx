@@ -2,7 +2,7 @@
 import React ,{useState , useEffect }from "react";
 import { useNavigate } from "react-router-dom";
 
-import navbar from "./navbar.css";
+import  "../NavBar/navbar.css";
 
 
 function NavBar() {

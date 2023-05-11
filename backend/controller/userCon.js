@@ -25,7 +25,8 @@ const addUser = async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: hashedPassword,
-    };
+      
+    }
     user.add(newUser, (err, results) => {
       if (err) console.log(err);
       const token = jwt.sign(
