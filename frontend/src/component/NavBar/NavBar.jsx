@@ -2,13 +2,13 @@
 import React ,{useState , useEffect }from "react";
 import { useNavigate } from "react-router-dom";
 
-import navbar from "./navbar.css";
+import  "../NavBar/navbar.css";
 
 
 function NavBar() {
   const navigate = useNavigate();
 
-  const [view,setView]=useState('/home')
+
   
 
 
@@ -19,7 +19,7 @@ function NavBar() {
         <div
           className="nav-item is-active"
           active-color="orange"
-          onClick={() => setView("/home")}
+          onClick={() => navigate("/home")}
         >
           Home
         </div>

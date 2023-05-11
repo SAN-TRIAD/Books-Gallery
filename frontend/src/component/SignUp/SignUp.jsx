@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../SignUp/Signup.css';
@@ -11,21 +12,41 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  // const handleLogIn = () => {
+  //   const body = { email, password };
+  //   axios.post('http://localhost:3001/Books-Gallery/user/login', body)
+  //     .then(rslt => console.log(rslt));
+  // };
   const handleLogIn = () => {
     const body = { email, password };
     axios.post('http://localhost:3001/Books-Gallery/user/login', body)
-      .then(rslt => console.log(rslt));
-  };
+      .then(resp => {
+        if (resp.status === 200) {
 
-  const handlesignup = () => {
+        navigate ('/home'); 
+      } 
+      else {
+
+        console.log(resp);
+      }
+    });
+  };
+ 
+  
+  const handlesignup = () => { 
+    if (name === "" || email === "" || password === "") {
+    alert("Please fill all the fields!");
+  } else {
     const body = { name, email, password };
     axios.post('http://localhost:3001/Books-Gallery/user/signup', body, {
       headers: { "Content-Type": "application/json" },
     })
       .then(rslt => {
         console.log(rslt);
-        alert("Welcome to our Gallery");
-      });
+      })
+      .catch((err) => console.log(err));
+   }
+    
   };
 
   const handleNameChange = (event) => {
@@ -72,7 +93,7 @@ const Signup = () => {
             <span>Use your account</span>
             <input type="email" placeholder="Email" value={email} onChange={handleEmailChange} />
             <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            <button onClick={handleLogIn}>Sign In</button>
+            <button onClick={()=>{handleLogIn();navigate('/home')}}>Sign In</button>
           </form>
         </div>
         <div className="overlay-container">
@@ -85,7 +106,7 @@ const Signup = () => {
             <div className="overlay-panel overlay-right">
               <h1>Hello, Friend</h1>
               <p>Enter your personal details and start the journey with us</p>
-              <button className="ghost" onClick={navigate('/home')} id="signUp">Sign Up</button>
+              <button className="ghost" id="signUp">Sign Up</button>
             </div>
           </div>
         </div>
@@ -95,3 +116,4 @@ const Signup = () => {
 };
 
 export default Signup;
+
