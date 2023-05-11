@@ -35,12 +35,13 @@ const addUser = async (req, res) => {
         { expiresIn: "1h" }
       );
       console.log(token, "this is token");
-      return res.status(201).json({ token });
+      return res.status(201).json(results);
     });
   } catch (err) {
     return res.status(500).json({ message: "Something went wrong", err });
   }
 };
+
 
 const deleteOne = (req, res) => {
   user.deleteUser(req.params.id, (err, results) => {
@@ -48,6 +49,8 @@ const deleteOne = (req, res) => {
     else res.status(204).send(results);
   });
 };
+
+
 
 const login = (req, res) => {
   const email = req.body.email;
@@ -70,10 +73,32 @@ const login = (req, res) => {
     }
   });
 };
+const updateOne =async (req, res) => {
+     try{
+      const hashedPassword = await bcrypt.hash(req.body.password, 10);
+      console.log(hashedPassword);
+       const body = {
+        name: req.body.name,
+        email: req.body.email,
+        password: hashedPassword,
+     
+      }
+     const name=req.params.name
+     console.log(body,name)
+     user.updateUser(name,body,(err,suc)=>{
+       if(err)res.status(500).send(err);
+       else res.json(suc)
+   })
+     }
+  catch (err) {
+    return res.status(500).json({ message: "Something went wrong", err });
+  }
+}
 
 module.exports = {
   getUser,
   addUser,
   deleteOne,
   login,
+  updateOne
 };
