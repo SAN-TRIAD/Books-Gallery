@@ -1,4 +1,4 @@
-
+const cloudinary = require("../utils/cloudinary")
 const connection=require('../dataBase/index.js')
 
 module.exports={
@@ -45,16 +45,7 @@ module.exports={
         })
 
 },
-// updateUser: (name, user) => {
-//     const sql = `update users set ? where name="${name}"`
-//       connection.query(sql, user, (err, result) => {
-//         if (err) {
-//           reject(err)
-//         } else {
-//           resolve(result)
-//         }
-//       })
-//     }
+
 updateUser: (name, user,cb) => {
     const sql = `update users set ? where name="${name}"`
       connection.query(sql, user, (err, result) => {
