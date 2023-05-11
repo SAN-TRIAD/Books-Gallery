@@ -52,8 +52,33 @@ const deleteOne= (req,res)=>{
   })
 }
 
+  const login=(req,res)=>{
+    const email=req.body.email
+    const password=req.body.password
+
+    user.userLogIn(email,(err,user)=>{
+    if (err) res.status(500).send('Error occured')
+    if (!user) res.status(401).send('Your email address or password are invalid')
+    else{
+      bcrypt.compare(password, user.password, (err, rslt) => {
+        
+        if (err) throw err
+
+        if (rslt) {
+            return res.status(200).json( "You logged in successfuly" )
+        } else {
+            return res.status(401).json( "Invalid " )
+        }
+
+    })
+
+    }
+    })
+}
+
 module.exports = {
   getUser,
   addUser,
-  deleteOne
+  deleteOne,
+  login
 };
