@@ -2,8 +2,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import '../SignUp/Signup.css';
+import { useNavigate } from "react-router-dom"
+
 
 const Signup = () => {
+    const navigate = useNavigate()
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -82,7 +86,7 @@ const Signup = () => {
             <div className="overlay-panel overlay-right">
               <h1>Hello, Friend</h1>
               <p>Enter your personal details and start the journey with us</p>
-              <button className="ghost" id="signUp">Sign Up</button>
+              <button className="ghost" onClick={navigate('/home')} id="signUp">Sign Up</button>
             </div>
           </div>
         </div>

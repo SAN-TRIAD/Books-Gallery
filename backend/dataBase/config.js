@@ -6,8 +6,8 @@
 //   }
 
 module.exports = { 
-    host: "localhost",
+    host: "127.0.0.1",
     database:"Book_Gallery",
     user: "root",
-    password: "root"
+    password: "12345678"
   }
