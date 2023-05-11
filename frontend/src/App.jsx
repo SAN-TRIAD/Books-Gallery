@@ -11,7 +11,7 @@ import AddBook from "./component/AddBook.jsx";
 function App() {
   const [data,setData]=useState([])
   const fetchData=()=>{
-    axios.get("http://localhost:3001/Books-Gallery/book/getAllBooks")
+    axios.get("http://127.0.0.1:3001/Books-Gallery/book/getAllBooks")
     .then((res)=>{
       setData(res.data)
     })

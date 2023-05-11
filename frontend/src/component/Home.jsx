@@ -1,13 +1,15 @@
 import { React } from "react";
 import { useNavigate } from "react-router-dom"
 import AllPosts from "./AllPosts.jsx";
+import NavBar from "./NavBar/NavBar.jsx"
 
 const Home = () => {
   const navigate = useNavigate()
 
   return (
     <div>
-      <nav className="nav">
+      <NavBar />
+      {/* <nav className="nav">
         <div
           className="nav-item is-active"
           active-color="orange"
@@ -35,7 +37,7 @@ const Home = () => {
           <button>search</button>
         </div>
         <span className="nav-indicator"></span>
-      </nav>
+      </nav> */}
       <div className="latest_trand_area">
         <div className="container">
           <div className="row">

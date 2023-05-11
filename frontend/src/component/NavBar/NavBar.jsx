@@ -8,7 +8,6 @@ import navbar from "./navbar.css";
 function NavBar() {
   const navigate = useNavigate();
 
-  const [view,setView]=useState('/home')
   
 
 
@@ -19,7 +18,7 @@ function NavBar() {
         <div
           className="nav-item is-active"
           active-color="orange"
-          onClick={() => setView("/home")}
+          onClick={() => navigate("/home")}
         >
           Home
         </div>
