@@ -1,0 +1,72 @@
+#form{
+    
+    max-width:700px;
+    margin:0 auto;
+    border-top:15px solid #000000;
+    background:#FFF;
+  
+    text-align:center;
+    color:#B6B6B6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    opacity:0.95;
+    box-shadow:0 0 15px -1px #141414;
+  }
+
+  #h3{
+    text-transform:uppercase;
+    font-size:30px;
+    line-height:10px;
+    color: #ff4b2b;
+    }
+
+    .div *{box-sizing:border-box;}
+    .div{
+      width:80%;
+      margin:10px ;
+      height:50px;
+      margin-right:50px;
+      margin-left : 150px;
+      text-align:center;
+    }
+    .div input, textarea{
+      width:50%;
+      height:100%;
+      opacity:0.9;
+      
+      top:20px;
+      background-color:#E8E9EA;
+      border:0;
+      outline:none;
+      margin:0;
+      color : #ff4b2b;
+    }
+
+    @media screen and (max-width: 1070px) {
+        #form{
+          width:100%;
+        }
+        #form div{
+          width:90%;
+        }
+      }
+      .label{
+        display:block;
+        position:relative;
+        top:50px;
+        width:25%;
+        height:100%;
+        background-color:#313A3D;
+        line-height:50px;
+        font-size:16px;
+        /* transition: all 0.3s ease-in-out,width 0.7s ease-in-out; */
+        text-transform:uppercase;
+      }
+
+  #file,#date{
+    
+        text-align: center;
+        color : #313A3D;
+        font-size : 15px;
+      
+  }
