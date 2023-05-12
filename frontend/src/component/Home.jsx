@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useNavigate } from "react-router-dom"
-import AllPosts from "./AllPosts.jsx";
+import AllPosts from "./AllBooks/AllPosts.jsx";
 
 const Home = () => {
   const navigate = useNavigate()

@@ -88,15 +88,6 @@ const deleteBook=(req,res)=>{
     else res.status(201).send("book deleted")
   })
 }
-const updatelike=(req, res) =>{
-  books.putlike(
-    function (err, results) {
-      if (err) res.status(500).send(err);
-      else res.json(results);
-    },
-    req.body.like,
-    req.params.id
-  );
-}
+
 
 module.exports = { getAllBooks, updateBook, deleteBook };

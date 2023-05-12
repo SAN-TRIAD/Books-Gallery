@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState , useEffect } from "react";
 import SignUp from "./component/SignUp/SignUp.jsx";
-import AllPosts from "./component/AllPosts.jsx";
+import AllPosts from "./component/AllBooks/AllPosts.jsx";
 import Home from "./component/Home.jsx";
 import axios from "axios";
-import OnePost from "./component/OnePost.jsx";
+import OnePost from "./component/OnePost/OnePost.jsx";
 import AddBook from "./component/AddBook.jsx";
 
 function App() {
