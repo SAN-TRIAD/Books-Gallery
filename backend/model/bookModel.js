@@ -15,6 +15,7 @@ module.exports = {
     //     else book.cover_image = result.secure_url;
         const sql = `UPDATE books SET ? WHERE id=${id}`;
         connection.query(sql, book, (err, result) => {
+          console.log(err,"the error from here")
           callback(err, result);
         });
   },
@@ -24,10 +25,5 @@ module.exports = {
       callback(err, result);
     });
   },
-  putlike: function (callback, likes, idpost) {
-    const sql = `UPDATE books SET likes = '${likes}' WHERE idpost ="${idpost}"`;
-    connection.query(sql, function (error, results) {
-      callback(error, results);
-    });
-  },
+
 };

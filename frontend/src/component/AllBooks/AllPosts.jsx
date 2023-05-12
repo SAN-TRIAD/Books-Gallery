@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import OnePost from "./OnePost.jsx"
-import NavBar from './NavBar/NavBar.jsx';
+import OnePost from "../OnePost/OnePost.jsx"
+import NavBar from '../NavBar/NavBar.jsx';
 import "./AllBooks.css"
 
 const AllPosts = ({ data }) => {
@@ -40,7 +40,7 @@ const AllPosts = ({ data }) => {
                       </div>
                       <div className="book-sum">{e.description} </div>
                       <div className="book-see">
-                        <button onClick={() => {
+                        <button className="btn" onClick={() => {
                           navigate("/OnePost",{
                             state: { formdef_data: e }
                             })
