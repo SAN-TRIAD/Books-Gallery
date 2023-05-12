@@ -1,7 +1,7 @@
 .nav {
   display: inline-flex;
   position: relative;
-  background-color: black;
+  background-color: transparent;
   padding: 0;
   width: 100%;
   border-radius: 10px;
@@ -10,7 +10,7 @@
 }
 
 .nav-item {
-  color: white;
+  color: rgb(20, 1, 1);
   padding: 20px;
   text-decoration: none;
   transition: 0.3s;
@@ -31,7 +31,7 @@
 }
 
 .nav-item:not(.is-active):hover {
-  color: #333;
+  color: #0e004a;
 }
 
 .nav-indicator {
@@ -57,14 +57,20 @@
   margin-top: 14px;
 }
 
-.search-input {
-  border-radius: 30px;
+.search-input :focus {
+  /* border-radius: 30px;
   width: 220px;
   height: 50px;
   border: none;
   box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px 0px;
   padding-left: 15px;
-  background-color: rgb(232, 237, 241);
+  background-color: rgb(232, 237, 241); */
+  background: rgba(0, 0, 0, .1);
+    max-width: 140px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    transition: all .6s ease;
 }
 
 .search-btn {
@@ -212,6 +218,7 @@ a {
   }
   
   /* search */
+  /*
   .search-div {
     margin-left: 67%;
     margin-top: 14px;
@@ -417,6 +424,7 @@ button.ghost {
 } */
 
 /* search */
+/*
 .search-div {
   margin-left: 67%;
   margin-top: 14px;
@@ -445,3 +453,4 @@ button.ghost {
   outline: none !important;
   cursor: pointer;
 }
+*/
