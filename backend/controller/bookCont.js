@@ -88,6 +88,22 @@ const deleteBook=(req,res)=>{
     else res.status(201).send("book deleted")
   })
 }
+const addNewBook=(req,res)=>{
+  const newBook=req.body
+books.add(newBook,(err,rslt)=>{
+  if (err) res.status(500).send(err)
+  else res.json(rslt)
+})
+}
 
 
-module.exports = { getAllBooks, updateBook, deleteBook };
+const getBook=(req,res)=>{
+  const searchName=req.params.bookName
+  books.search(searchName,(err,rslt)=>{
+    if (err) res.status(500).send(err)
+    else res.json(rslt)
+  })
+}
+
+
+module.exports = { getAllBooks, updateBook, deleteBook,addNewBook,getBook };

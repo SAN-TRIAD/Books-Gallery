@@ -18,12 +18,12 @@ function OnePost() {
       <div className="item-preview">
       <div className="book">
           
+          <img className="img1" src={data.cover_image} />
        </div>
     </div>
         
 
           <div className="item-details">
-          <img className="img1" src={data.cover_image} />
           <h1 className="h1" >{data.title}<span className="subtitle" >{data.author}</span>  </h1>
           <div className="pane__section">
             <p className="p">
