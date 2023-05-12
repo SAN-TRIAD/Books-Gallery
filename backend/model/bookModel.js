@@ -26,4 +26,28 @@ module.exports = {
     });
   },
 
+  add: function(newBook,callback){
+    const sql=`INSERT INTO BOOKS SET
+    title="${newBook.title}",
+    author="${newBook.author}",
+    genre="${newBook.genre}",
+    description="${newBook.description}",
+    publication_date="${newBook.date}",
+    language="${newBook.language}",
+    number_pages=${newBook.pages},
+    price="${newBook.price}",
+    cover_image="${newBook.image}",
+    users_id=2`
+    connection.query(sql,function(err,rslt){
+        callback(err,rslt)
+    })
+},
+
+search:function(searchName,callback){
+    const sql = `SELECT * FROM BOOKS WHERE title like "%${searchName}%"`
+    connection.query(sql,function(err,rslt){
+        callback(err,rslt)
+    })
+}
 };
+

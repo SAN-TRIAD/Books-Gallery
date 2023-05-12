@@ -51,7 +51,7 @@ const Edit = ({data}) => {
 
     axios.put(`http://127.0.0.1:3001/Books-Gallery/book/${id}`, updatedBook)
       .then(res => {
-        console.log(res)
+        setBook(updatedBook);
         navigate("/all")
       })
       .catch(err => console.log(err));
