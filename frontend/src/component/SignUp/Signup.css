@@ -14,16 +14,17 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: -20px 0 50px;
-    background-image: url(https://images.unsplash.com/photo-1500993855538-c6a99f437aa7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+    /* margin: -20px 0 50px; */
+    background-image: url(https://img.freepik.com/photos-gratuite/feuilles-sechees-pres-livres-camera_23-2147888718.jpg?w=996&t=st=1683907202~exp=1683907802~hmac=8dbb5d0d6cd8a533076a818a6b88c1b410651f7e1ac9d0b9c4381ca5ea4dc54b);
     background-size: cover;
+    padding-left: 40%;
 }
 
 
 h1 {
     font-weight: bold;
     margin: 0;
-    color: beige;
+    color: #ff4b2b;
 }
 
 p {
@@ -36,11 +37,11 @@ p {
 
 span {
     font-size: 12px;
-    color: beige;
+    color: rgb(255, 255, 255);
 }
 
 a {
-    color: #fff;
+    color: #191313;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
@@ -58,7 +59,7 @@ a {
 }
 
 .form-container form {
-    background: rgba(45, 52, 54, 1.0);
+    background: rgb(55, 64, 66);
     display: flex;
     flex-direction: column;
     padding: 0 50px;
@@ -200,7 +201,7 @@ button.ghost {
 .overlay {
     background: transparent;
     background: linear-gradient(to right, #ff4b2b, #ff416c) no repeat 0 0 /cover;
-    color: #fff;
+    color: #120f0f;
     position: absolute;
     left: -100%;
     height: 100%;

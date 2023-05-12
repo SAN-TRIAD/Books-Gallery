@@ -7,15 +7,15 @@ import  "../NavBar/navbar.css";
 
 function NavBar() {
   const navigate = useNavigate();
-  const [search, setSearch] = useState('')
-  const [searchResults, setSearchResults] = useState([]);
+  const [search, setSearch] = useState('');
 
-  const  handleSearch=()=>{
+  const handleSearch = () => {
     axios.get(`http://localhost:3001/Books-Gallery/book/search/${search}`)
-    .then(reslt=>{console.log(reslt.data)
-                 setSearchResults(reslt.data)
-                })
-    .catch(err=>console.log(err))
+      .then(res => {
+        const searchResults = res.data;
+        navigate("/search", { state: { searchResults } });
+      })
+      .catch(err => console.log(err));
   }
 
 
@@ -46,7 +46,7 @@ function NavBar() {
         </div>
         <div className="nav-item" active-color="red">
         <input type="text" defaultValue={search} onChange={(e) => setSearch(e.target.value)} />
-          <button onClick={handleSearch}>search</button>
+          <button onClick={handleSearch}>Search</button>
         </div>
         <span className="nav-indicator"></span>
       </nav>
