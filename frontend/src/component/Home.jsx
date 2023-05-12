@@ -26,7 +26,7 @@ const Home = () => {
         <div
           className="nav-item"
           active-color="red"
-          onClick={() => navigate("AddBook")}
+          onClick={() => navigate("/AddBook")}
         >
           Add Book
         </div>
