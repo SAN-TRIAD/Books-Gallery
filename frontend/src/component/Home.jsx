@@ -2,43 +2,14 @@ import { React } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "./NavBar/NavBar.jsx"
 import AllPosts from "./AllBooks/AllPosts.jsx";
-
+import NavBar from "../component/NavBar/NavBar.jsx"
 const Home = () => {
   const navigate = useNavigate()
 
   return (
-    <div>
-      <NavBar />
-      {/* <nav className="nav">
-        <div
-          className="nav-item is-active"
-          active-color="orange"
-          onClick={() => navigate("/home")}
-        >
-          Home
-        </div>
-
-        <div
-          className="nav-item"
-          active-color="green"
-          onClick={() => navigate("/all")}
-        >
-          All Books
-        </div>
-        <div
-          className="nav-item"
-          active-color="red"
-          onClick={() => navigate("AddBook")}
-        >
-          Add Book
-        </div>
-        <div className="nav-item" active-color="red">
-          <input type="text" />
-          <button>search</button>
-        </div>
-        <span className="nav-indicator"></span>
-      </nav> */}
-      <div className="latest_trand_area">
+      <div>
+      <NavBar/>
+        <div className="latest_trand_area">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
