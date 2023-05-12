@@ -12,18 +12,19 @@ function OnePost() {
   return (
   <>
     <NavBar />
-    <div>OnePost</div>
     <div className="body1">
     <div className="container1" >
       <article className="article.item-pane">
       <div className="item-preview">
-      <div className="book"></div>
+      <div className="book">
+          
+       </div>
     </div>
         
 
           <div className="item-details">
-          <h1 className="h1" >{data.title}<span className="subtitle" >{data.author}</span>  </h1>
           <img className="img1" src={data.cover_image} />
+          <h1 className="h1" >{data.title}<span className="subtitle" >{data.author}</span>  </h1>
           <div className="pane__section">
             <p className="p">
               {data.description}
