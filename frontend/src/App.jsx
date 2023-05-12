@@ -21,7 +21,7 @@ function App() {
   }
   useEffect(()=>{
     fetchData()
-  },[])
+  },[data])
   return (
     <BrowserRouter>
       <Routes>
