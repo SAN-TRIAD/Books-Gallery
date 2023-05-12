@@ -1,6 +1,5 @@
 import { React } from "react";
 import { useNavigate } from "react-router-dom"
-import AllPosts from "./AllPosts.jsx";
 import NavBar from "./NavBar/NavBar.jsx"
 import AllPosts from "./AllBooks/AllPosts.jsx";
 
