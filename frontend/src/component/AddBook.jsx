@@ -3,8 +3,7 @@ import NavBar from './NavBar/NavBar.jsx';
 import axios from 'axios';
 import  { Image } from 'cloudinary-react'
 import { useNavigate } from "react-router-dom"
-
-//import "./addBook.css"
+import "../component/addBook.css"
 
 
 const AddBook = () => {
@@ -39,63 +38,54 @@ const AddBook = () => {
         .then(navigate("/home"))
     }
 
-    // function handleUploadAndAddBook(){
-    //   uploadImage()
-    //   addBook({
-    //     title,
-    //     author,
-    //     genre,
-    //     description,
-    //     date,
-    //     language,
-    //     pages,
-    //     price,
-    //     image
-    //         })
-    // }
 
     return (
-        
-        <form>
-                <NavBar/>
-        <div >
-          <div>
-            <label>Title:</label>
+         <div >
+         <NavBar/>
+         <br />
+        <form id="form">
+             <h3 id="h3">ADD A NEW BOOK !</h3>
+             
+          <div className="div">
+            <label className='label'>Title:</label>
             <input type="text" placeholder="Title" defaultValue={title} onChange={(e)=>{setTitle(e.target.value)} }/>
           </div>
-          <div >
-            <label>Author:</label>
+          <div className="div"> 
+            <label  className='label'>Author:</label>
             <input type="text" placeholder="Author" defaultValue={author} onChange={(e)=>{setAuthor(e.target.value)} } />
           </div>
-          <div >
-            <label>Genre:</label>
+          <div className="div"> 
+            <label  className='label'>Genre:</label>
             <input type="text" placeholder="Genre" defaultValue={genre} onChange={(e)=>{setGenre(e.target.value)} } />
           </div>
-          <div >
-            <label>Description:</label>
+          <div className="div"> 
+            <label  className='label'>Description:</label>
             <input type="text" placeholder="Description" defaultValue={description} onChange={(e)=>{setDescription(e.target.value)} }/>
           </div>
-          <div >
-            <label>Publication Date:</label>
-            <input type="date" placeholder="Date" defaultValue={date} onChange={(e)=>{setDate(e.target.value)} }/>
+          <div className="div"> 
+            <label  className='label'>Date:</label>
+            <input type="date" id ="date"placeholder="Date" defaultValue={date} onChange={(e)=>{setDate(e.target.value)} }/>
           </div>
-          <div >
-            <label>Language:</label>
+          <div className="div"> 
+            <label  className='label'>Language:</label>
             <input type="text" placeholder="Language" defaultValue={language} onChange={(e)=>{setLanguage(e.target.value)} }/>
           </div>
-          <div >
-            <label>Number Of Pages:</label>
-            <input type= "number" placeholder="Number Of Pages" defaultValue={pages} onChange={(e)=>{setPages(e.target.value)} }/>
+          <div className="div"> 
+            <label  className='label'>Pages:</label>
+            <input type= "text" id="nb" placeholder="Number Of Pages" defaultValue={pages} onChange={(e)=>{setPages(e.target.value)} }/>
           </div>
-          <div >
-            <label>Price:</label>
+          <div className="div"> 
+            <label  className='label'>Price:</label>
             <input type="text" placeholder="Price" defaultValue={price} onChange={(e)=>{setPrice(e.target.value)} }/>
           </div>    
-          <div >
-            <label>Image:</label>
-            <input type="file" placeholder="Image" defaultValue={image} onChange={uploadImage}/>
+          <div className="div"> 
+            <label  className='label'>Image:</label>
+            <input type="file" id="file" placeholder="Image" defaultValue={image} onChange={uploadImage}/>
             {image && <Image cloudName="dhvhvswmj" publicId={image} width="150" height="150" />}
           </div>
+          <br />
+          <br />
+          <br />
           <button onClick={()=>addBook({
                                           title,
                                           author,
@@ -108,8 +98,9 @@ const AddBook = () => {
                                           image
                                        })
             } >Add Book</button>
-        </div>
+        
         </form>
+        </div>
       )
 }
 

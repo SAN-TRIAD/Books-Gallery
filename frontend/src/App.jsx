@@ -7,6 +7,8 @@ import Home from "./component/Home.jsx";
 import axios from "axios";
 import OnePost from "./component/OnePost/OnePost.jsx";
 import AddBook from "./component/AddBook.jsx";
+import  Search from "./component/Search.jsx";
+
 
 function App() {
   const [data,setData]=useState([])
@@ -30,6 +32,7 @@ function App() {
         <Route path="/all" element={<AllPosts data={data} />} />
         <Route path="/add" element={<AddBook/>}/>
         <Route path="/OnePost" element={<OnePost/>}/>
+        <Route path="/search" element={<Search />} />
       </Routes>
     </BrowserRouter>
   );
