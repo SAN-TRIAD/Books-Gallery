@@ -1,15 +1,24 @@
 import { React } from "react";
 import { useNavigate } from "react-router-dom"
-import NavBar from "./NavBar/NavBar.jsx"
 import AllPosts from "./AllBooks/AllPosts.jsx";
 import NavBar from "../component/NavBar/NavBar.jsx"
+
+
+
+
 const Home = () => {
   const navigate = useNavigate()
 
   return (
-      <div>
-      <NavBar/>
-        <div className="latest_trand_area">
+    <div>
+      <NavBar />
+      <div className="latest_trand_area" style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "80%",
+        height: "100vh",
+      }}>
         <div className="container">
           <div className="row">
             <div className="col-xl-12">

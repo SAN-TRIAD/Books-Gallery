@@ -56,8 +56,27 @@
   margin-left: 67%;
   margin-top: 14px;
 }
+#search-input{
+  width: 240px;
+  text-align: center;
+  background: #E8E9EA;;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-family: 'PLay', sans-serif;
+  font-size: 16px;
+  font-weight: 200px;
+  padding: 10px 0;
+  transition: border 0.5s;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+}
 
-.search-input :focus {
+.iconsearch{
+font-size: 24px;
+}
+#search-input :focus {
   /* border-radius: 30px;
   width: 220px;
   height: 50px;
@@ -72,7 +91,7 @@
   padding: 10px 15px;
   transition: all 0.6s ease;
 }
-
+/* 
 .search-btn {
   position: absolute;
   left: 15px;
@@ -85,7 +104,7 @@
   background: grey;
   outline: none !important;
   cursor: pointer;
-}
+} */
 
 /** @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
