@@ -63,4 +63,3 @@ function OnePost() {
 }
 
 export default OnePost
-    

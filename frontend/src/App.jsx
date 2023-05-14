@@ -33,8 +33,6 @@ function App() {
         <Route path="/add" element={<AddBook/>}/>
         <Route path="/OnePost" element={<OnePost/>}/>
         <Route path="/search" element={<Search />} />
-
-
       </Routes>
     </BrowserRouter>
   );
