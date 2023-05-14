@@ -21,7 +21,7 @@ const Home = () => {
     </div>
         <div className="hero-content-area">
         <h1>Book Gallery</h1>
-            <h3  className="pr1" style={{float: 'right', textAlign: 'center', paddingRight: '50px'}} > Welcome To Our Gallery Where you will find the mystorious Book </h3>
+            <h3  className="pr1" style={{float: 'right', textAlign: 'center', paddingRight: '50px'}} > Welcome to our gallery where you can find the mystery book. </h3>
         <a href="#" className="btn" onClick={() => navigate("/all")}>View All Books</a>
         </div>
         </section>

@@ -17,6 +17,10 @@ overlay * {
 book-store book-img {
   max-width: 80%;
 }
+.body6 {
+  text-align:center;
+
+}
 
 /* html {
  box-sizing: border-box;
