@@ -13,15 +13,6 @@ const Home = () => {
     <div>
       <NavBar />
       <div className="body5">
-{/* <header>
-    <h2 href="#"> Mountain Travel</h2>
-    <nav>
-       <li><a href="#">Main</a> </li> 
-        <li><a href="#">404</a> </li>
-        <li><a href="#">Contact</a> </li>
-        
-    </nav>
-    </header> */}
     
     <section className="hero">
     <div 
@@ -36,26 +27,7 @@ const Home = () => {
         </section>
 
      </div>
-      {/* <div className="latest_trand_area" style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "80%",
-        height: "100vh",
-      }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-12">
-              <div className="trand_info text-center">
-                <h3>Discover latest trending Books</h3>
-                <a className="boxed-btn3" onClick={() => navigate("/all")}>
-                  View all Books
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
+
     </div>
   );
 };
