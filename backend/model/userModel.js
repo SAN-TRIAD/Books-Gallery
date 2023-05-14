@@ -31,6 +31,7 @@ module.exports={
     deleteUser:function(id,callback){
         const sql=`DELETE FROM users WHERE id=${id}`
         connection.query(sql,function(err,result){
+          console.log(err,"here")
             callback(err,result)
         })
     },
