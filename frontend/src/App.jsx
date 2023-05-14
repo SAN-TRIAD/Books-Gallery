@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState , useEffect } from "react";
 import SignUp from "./component/SignUp/SignUp.jsx";
 import AllPosts from "./component/AllBooks/AllPosts.jsx";
-import Home from "./component/Home.jsx";
+import Home from "./component/Home/Home.jsx";
 import axios from "axios";
 import OnePost from "./component/OnePost/OnePost.jsx";
 import AddBook from "./component/AddBook.jsx";
