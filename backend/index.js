@@ -5,7 +5,7 @@ const router = require('./routes/bookRoute')
 const cors = require('cors')
 const userRoute = require("./routes/userRoute");
 const app = express()
-const port = 3001
+const port = 3003
 
 app.use(cors())
 app.use(express.json())
