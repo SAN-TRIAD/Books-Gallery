@@ -8,8 +8,9 @@ const AllPosts = ({ data }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="body6" >
+    <div >
       <NavBar />
+      <div className="body6" >
       <div className="book-store">
       {data.map((e, i) => {
    
@@ -53,6 +54,7 @@ const AllPosts = ({ data }) => {
             </div>
         );
       })}
+      </div>
       </div>
     </div>
   );
