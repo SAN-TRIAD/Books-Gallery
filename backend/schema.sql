@@ -21,7 +21,7 @@ USE book_gallery ;
 -- -----------------------------------------------------
 -- Table book_gallery.users
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS book_gallery.users (
+CREATE TABLE IF NOT EXISTS `book_gallery`.`users` (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(225) NOT NULL,
@@ -32,7 +32,7 @@ DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 -- Table book_gallery.books
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS book_gallery.books (
+CREATE TABLE IF NOT EXISTS `book_gallery`.`books` (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(255) NOT NULL,
   author VARCHAR(255) NOT NULL,
