@@ -8,7 +8,7 @@ const AllPosts = ({ data }) => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="body6" >
       <NavBar />
       <div className="book-store">
       {data.map((e, i) => {
@@ -16,7 +16,7 @@ const AllPosts = ({ data }) => {
         return (
           <div className="cc" key={i}>
               <div className="book-slide">
-                <div className="js-flickity" data-flickity-options='{ "wrapAround": true }'>
+                <div className="js-flickity" >
                   <div className="book-cell">
                     <div className="book-img">
                       <img src={e.cover_image} alt="" className="book-photo" />

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
-
 :root {
   --body-bg-color: #e5f4f9;
   --body-color-light: #8b939c;
@@ -16,7 +15,11 @@ overlay * {
   box-sizing: border-box;
 }
 book-store book-img {
-  max-width: 100%;
+  max-width: 80%;
+}
+.body6 {
+  text-align:center;
+
 }
 
 /* html {
@@ -27,7 +30,7 @@ book-store book-img {
 .cc {
   width: 100%;
 }
-
+book-cell
 .book-store {
   display: flex;
   flex-direction: column;
@@ -38,9 +41,9 @@ book-store book-img {
  overflow: hidden;
  box-shadow: 0px 2px 50px 10px rgba(0, 0, 0, 0.21); */
 }
-.book.js-flickity {
-  width: 100%; /* increase the width */
-  height: 320px; /* increase the height */
+js-flickity {
+  width: 50%; /* increase the width */
+  height: 50px; /* increase the height */
 }
 
 .book-slide {
