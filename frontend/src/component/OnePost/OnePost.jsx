@@ -13,34 +13,37 @@ function OnePost() {
   <>
     <NavBar />
     <div className="body1">
-    <div className="container1" >
-      <article className="article.item-pane">
-      <div className="item-preview">
-      <div className="book">
+    <div class="container">
+  <article class="item-pane">
+    <div class="item-preview">
+      <div class="book">
           
           <img className="img1" src={data.cover_image} />
        </div>
     </div>
         
 
-          <div className="item-details">
-          <h1 className="h1" >{data.title}<span className="subtitle" >{data.author}</span>  </h1>
+       <div className="item-details">
+          <h1 className="h1" >{data.title} </h1>
+          <span className="subtitle" >{data.author}</span> 
           <div className="pane__section">
             <p className="p">
               {data.description}
             </p>
           </div>
           <div className="pane__section1" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-  <dl>
-    <dt>Genre: {data.genre}</dt>
-  </dl>
-  <dl>
-    <dt>Publication Date: {data.publication_date}</dt>
-    <dt> Pages: {data.number_pages}</dt>
-  </dl>
-  <dl>
-    <dt>Language: {data.language}</dt>
-  </dl>
+  <div>
+    <h2>Genre: {data.genre}</h2>
+   </div> 
+   <div>
+    <h2>Language: {data.language}</h2>
+    </div>
+    <div>
+    <h3>Publication Date: {data.publication_date}</h3>
+    </div>
+    <div>
+    <h3> Pages: {data.number_pages}</h3>
+  </div>
 </div>
 
             <div className="pane__section.clearfix" >
