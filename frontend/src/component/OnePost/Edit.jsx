@@ -18,7 +18,7 @@ const Edit = ({data}) => {
     const [price, setPrice] = useState(data.price);
     const [cover_image, setCoverImage] = useState('');
     const navigate = useNavigate();
-   
+  
   const handleImageUpload = e => {
     const file = e.target.files[0];
     const formData = new FormData();

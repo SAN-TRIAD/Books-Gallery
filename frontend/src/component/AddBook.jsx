@@ -63,7 +63,7 @@ const AddBook = () => {
             <input type="text" placeholder="Description" defaultValue={description} onChange={(e)=>{setDescription(e.target.value)} }/>
           </div>
           <div className="div"> 
-            <label  className='label'>Publication Date:</label>
+            <label  className='label'>Date:</label>
             <input type="date" id ="date"placeholder="Date" defaultValue={date} onChange={(e)=>{setDate(e.target.value)} }/>
           </div>
           <div className="div"> 
@@ -71,7 +71,7 @@ const AddBook = () => {
             <input type="text" placeholder="Language" defaultValue={language} onChange={(e)=>{setLanguage(e.target.value)} }/>
           </div>
           <div className="div"> 
-            <label  className='label'>Number Of Pages:</label>
+            <label  className='label'>Pages:</label>
             <input type= "text" id="nb" placeholder="Number Of Pages" defaultValue={pages} onChange={(e)=>{setPages(e.target.value)} }/>
           </div>
           <div className="div"> 

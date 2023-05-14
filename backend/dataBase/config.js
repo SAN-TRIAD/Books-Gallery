@@ -5,3 +5,9 @@ module.exports = {
     password: process.env.DB_PASSWORD
   }
 
+// module.exports = { 
+//     host: "127.0.0.1",
+//     database:"Book_Gallery",
+//     user: "root",
+//     password: "12345678"
+//   }
